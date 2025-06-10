@@ -29,5 +29,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@users.noreply.github.com"
           git add data_output/nba_stats.json
-          git commit -m "🔁 Mise à jour automatique du fichier JSON"
+          git diff --cached --quiet || git commit -m "🔁 Mise à jour automatique du fichier JSON"
           git push
